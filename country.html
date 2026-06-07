@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Country Detail - AtlasClock</title>
+  <meta name="description" content="Detailed country information with real-time clock, weather data, and major city times.">
+  <meta name="theme-color" content="#0a0a1a">
+  <meta property="og:title" content="Country Detail - AtlasClock">
+  <meta property="og:description" content="Detailed country information with real-time clock, weather data, and major city times.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://atlasclock.vercel.app/country.html?code=US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Country Detail - AtlasClock">
+  <meta name="twitter:description" content="Detailed country information with real-time clock, weather data, and major city times.">
+  <link rel="canonical" href="https://atlasclock.vercel.app/country.html?code=US">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@200;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/upgrades.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+</head>
+<body>
+
+<div class="loading-screen" id="loadingScreen">
+  <div class="loading-content">
+    <div class="loading-spinner"></div>
+    <div class="loading-text">Synchronizing Time</div>
+  </div>
+</div>
+
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="">Home</a></li>
+      <li><a href="world-clocks.html" class="">World Clocks</a></li>
+      <li><a href="explorer.html" class="">Explorer</a></li>
+      <li><a href="guide.html" class="">Time Zones</a></li>
+      <li><a href="features.html" class="">Features</a></li>
+      <li><a href="about.html" class="">About</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+
+<div class="country-detail-hero" style="background:var(--bg-secondary);">
+  <div class="container">
+    <div id="countryContent">
+      <div style="text-align:center;padding:40px 0;">
+        <i class="fas fa-spinner fa-spin" style="font-size:2rem;color:var(--accent-2);"></i>
+        <p style="color:var(--text-muted);margin-top:var(--space-md);">Loading country data...</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+        </a>
+        <p>AtlasClock provides real-time global time synchronization with cinematic visualizations and premium user experience.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <a href="world-clocks.html">World Clocks</a>
+        <a href="explorer.html">Country Explorer</a>
+        <a href="guide.html">Time Zones Guide</a>
+        <a href="features.html">Features</a>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <a href="about.html">About Us</a>
+        <a href="#">API Status</a>
+        <a href="#">Documentation</a>
+        <a href="#">Changelog</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="#"><i class="fab fa-github"></i> GitHub</a>
+        <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+        <a href="#"><i class="fab fa-discord"></i> Discord</a>
+        <a href="#"><i class="fas fa-envelope"></i> Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 AtlasClock. All rights reserved.</span>
+      <span>Precision Time. Global Reach.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/country-data.js"></script>
+<script src="assets/js/time-api.js"></script>
+<script src="assets/js/clock-engine.js"></script>
+<script src="assets/js/odometer.js"></script>
+<script src="assets/js/logo-animation.js"></script>
+<script src="assets/js/weather-api.js"></script>
+<script src="assets/js/earth-3d.js"></script>
+<script src="assets/js/animations.js"></script>
+<script src="assets/js/page-router.js"></script>
+<script src="assets/js/futuristic-loader.js"></script>
+<script src="assets/js/page-transitions.js"></script>
+<script src="assets/js/swiper-3d-init.js"></script>
+<script src="assets/js/brand-slider.js"></script>
+<script src="assets/js/explorer-3d.js"></script>
+<script src="assets/js/app.js"></script>
+
+</body>
+</html>

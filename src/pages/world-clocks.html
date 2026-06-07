@@ -1,0 +1,88 @@
+{{head:World Clocks 3D - AtlasClock|Interactive 3D rotating global time carousel. Real-time world clocks with odometer digits, animated flags, and region-based orbital viewing.|world-clocks.html}}
+{{nav:world-clocks}}
+{{include:head}}
+{{include:navbar}}
+
+<div class="page-header">
+  <div class="container">
+    <div class="section-label">3D Global Time Network</div>
+    <h1 class="section-title">World <span class="gradient-text">Clocks</span></h1>
+    <p class="section-subtitle">Interactive 3D rotating carousel of global time zones. Switch between regions and explore real-time data.</p>
+  </div>
+</div>
+
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="region-tabs" id="regionTabs">
+      <button class="region-tab active" data-region="all">All Regions</button>
+      <button class="region-tab" data-region="asia">Asia</button>
+      <button class="region-tab" data-region="europe">Europe</button>
+      <button class="region-tab" data-region="africa">Africa</button>
+      <button class="region-tab" data-region="americas">Americas</button>
+      <button class="region-tab" data-region="oceania">Oceania</button>
+    </div>
+    <div class="swiper-3d-world">
+      <div class="swiper">
+        <div class="swiper-wrapper"></div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--bg-secondary);">
+  <div class="container">
+    <div class="section-label">Time Intelligence</div>
+    <h2 class="section-title">Live <span class="gradient-text">Dashboard</span></h2>
+    <p class="section-subtitle">Real-time global analytics with animated HUD panels.</p>
+    <div class="hud-dashboard" style="margin-top:32px;">
+      <div class="hud-dashboard-grid">
+        <div class="hud-dash-item glass" data-reveal>
+          <div class="dash-label"><i class="fas fa-sun" style="color:#fdcb6e;"></i> Daylight</div>
+          <div class="dash-value odo-auto" id="wcDaylightCount">--</div>
+        </div>
+        <div class="hud-dash-item glass" data-reveal data-reveal-delay="0.08">
+          <div class="dash-label"><i class="fas fa-moon" style="color:#636e72;"></i> Night</div>
+          <div class="dash-value odo-auto" id="wcNightCount">--</div>
+        </div>
+        <div class="hud-dash-item glass" data-reveal data-reveal-delay="0.16">
+          <div class="dash-label"><i class="fas fa-briefcase" style="color:#00cec9;"></i> Business Hours</div>
+          <div class="dash-value odo-auto" id="wcBusinessCount">--</div>
+        </div>
+        <div class="hud-dash-item glass" data-reveal data-reveal-delay="0.24">
+          <div class="dash-label"><i class="fas fa-globe" style="color:#a29bfe;"></i> Total Countries</div>
+          <div class="dash-value" id="wcCountryCount">141</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-label">Analytics</div>
+    <h2 class="section-title">Time <span class="gradient-text">Distribution</span></h2>
+    <p class="section-subtitle">See which parts of the world are currently in daylight, night, or peak business hours.</p>
+    <div class="hud-dashboard" style="margin-top:32px;">
+      <div class="hud-dashboard-grid">
+        <div class="hud-dash-item glass" data-reveal>
+          <div class="dash-label">Daylight Zones</div>
+          <div class="dash-value odo-auto" id="daylightCount">--</div>
+        </div>
+        <div class="hud-dash-item glass" data-reveal data-reveal-delay="0.1">
+          <div class="dash-label">Night Zones</div>
+          <div class="dash-value odo-auto" id="nightCount">--</div>
+        </div>
+        <div class="hud-dash-item glass" data-reveal data-reveal-delay="0.2">
+          <div class="dash-label">Business Hours</div>
+          <div class="dash-value odo-auto" id="businessCount">--</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{include:footer}}
+{{include:scripts}}

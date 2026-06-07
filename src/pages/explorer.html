@@ -1,0 +1,43 @@
+{{head:3D Country Explorer - AtlasClock|Interactive 3D global explorer. Browse countries with live time, weather, and city data. Region-based holographic node system.|explorer.html}}
+{{nav:explorer}}
+{{include:head}}
+{{include:navbar}}
+
+<!-- 3D EXPLORER HEADER -->
+<div class="explorer-3d-header">
+  <div class="container">
+    <div class="section-label">3D Global Intelligence</div>
+    <h1 class="section-title">Country <span class="gradient-text">Explorer</span></h1>
+    <p class="section-subtitle">Interactive holographic node system. Browse countries by region with live time, weather, and city data.</p>
+    <div class="explorer-3d-search">
+      <input type="text" id="explorerSearch3D" placeholder="Search by country, capital, or city..." autocomplete="off">
+    </div>
+  </div>
+</div>
+
+<!-- REGION TABS + 3D NODE GRID -->
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="explorer-region-bar" id="explorerRegionTabs">
+      <button class="explorer-region-tab active" data-region="all">🌐 All Regions</button>
+      <button class="explorer-region-tab" data-region="asia">🌏 Asia</button>
+      <button class="explorer-region-tab" data-region="europe">🌍 Europe</button>
+      <button class="explorer-region-tab" data-region="africa">🌍 Africa</button>
+      <button class="explorer-region-tab" data-region="americas">🌎 Americas</button>
+      <button class="explorer-region-tab" data-region="oceania">🌏 Oceania</button>
+    </div>
+    <div class="explorer-3d-grid" id="explorer3DGrid">
+      <div style="grid-column:1/-1;text-align:center;padding:60px 0;">
+        <i class="fas fa-spinner fa-spin" style="font-size:2rem;color:var(--accent-2);"></i>
+        <p style="color:var(--text-muted);margin-top:12px;">Loading global time nodes...</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:40px;">
+      <a href="world-clocks.html" class="btn btn-ghost" data-transition><i class="fas fa-globe"></i> View 3D World Clocks</a>
+      <a href="country.html?code=US" class="btn btn-ghost" style="margin-left:8px;" data-transition><i class="fas fa-flag"></i> Country Detail</a>
+    </div>
+  </div>
+</section>
+
+{{include:footer}}
+{{include:scripts}}

@@ -1,0 +1,74 @@
+{{head:Time Zones Guide - AtlasClock|Comprehensive guide to time zones, UTC offsets, daylight saving time, and world time standards.|guide.html}}
+{{nav:guide}}
+{{include:head}}
+{{include:navbar}}
+
+<div class="page-header">
+  <div class="container">
+    <div class="section-label">Time Knowledge</div>
+    <h1 class="section-title">Time Zones <span class="gradient-text">Guide</span></h1>
+    <p class="section-subtitle">Everything you need to know about global time zones, UTC offsets, and daylight saving time.</p>
+  </div>
+</div>
+
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="section-label">UTC Distribution</div>
+    <h2 class="section-title">Offset <span class="gradient-text">Grid</span></h2>
+    <p class="section-subtitle">Countries grouped by their UTC offset. Click any to explore.</p>
+    <div class="grid-auto-sm" id="utcOffsetGrid" style="margin-top:32px;"></div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--bg-secondary);">
+  <div class="container">
+    <div class="section-label">How It Works</div>
+    <h2 class="section-title">Time Zone <span class="gradient-text">Fundamentals</span></h2>
+    <div class="guide-timeline">
+      <div class="guide-item" data-reveal>
+        <h3>Coordinated Universal Time (UTC)</h3>
+        <p>The primary time standard by which the world regulates clocks and time. All time zones are defined by their offset from UTC, ranging from UTC-12 to UTC+14.</p>
+      </div>
+      <div class="guide-item" data-reveal data-reveal-delay="0.1">
+        <h3>UTC Offset System</h3>
+        <p>Each time zone has a fixed offset from UTC, typically in whole hours but some regions use half-hour (UTC+5:30 India) or quarter-hour offsets (UTC+5:45 Nepal).</p>
+      </div>
+      <div class="guide-item" data-reveal data-reveal-delay="0.2">
+        <h3>Daylight Saving Time (DST)</h3>
+        <p>Many regions adjust their clocks forward by one hour during summer months to extend evening daylight. Not all countries observe DST.</p>
+      </div>
+      <div class="guide-item" data-reveal data-reveal-delay="0.3">
+        <h3>International Date Line</h3>
+        <p>An imaginary line on the Earth's surface at roughly 180° longitude where the date changes by one day when crossed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-label">Quick Reference</div>
+    <h2 class="section-title">Common <span class="gradient-text">Offsets</span></h2>
+    <p class="section-subtitle">The most frequently used time zone offsets across the globe.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:32px;">
+      <span class="zone-badge utc">UTC (GMT)</span>
+      <span class="zone-badge europe">UTC+1 (CET)</span>
+      <span class="zone-badge europe">UTC+2 (EET)</span>
+      <span class="zone-badge europe">UTC+3 (MSK)</span>
+      <span class="zone-badge asia">UTC+4 (GST)</span>
+      <span class="zone-badge asia">UTC+5 (PKT)</span>
+      <span class="zone-badge asia">UTC+5:30 (IST)</span>
+      <span class="zone-badge asia">UTC+7 (ICT)</span>
+      <span class="zone-badge asia">UTC+8 (CST/SGT)</span>
+      <span class="zone-badge asia">UTC+9 (JST/KST)</span>
+      <span class="zone-badge pacific">UTC+10 (AEST)</span>
+      <span class="zone-badge pacific">UTC+12 (NZST)</span>
+      <span class="zone-badge americas">UTC-5 (EST)</span>
+      <span class="zone-badge americas">UTC-8 (PST)</span>
+      <span class="zone-badge americas">UTC-3 (BRT)</span>
+    </div>
+  </div>
+</section>
+
+{{include:footer}}
+{{include:scripts}}

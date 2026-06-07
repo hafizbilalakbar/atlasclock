@@ -1,0 +1,218 @@
+{{head:AtlasClock - 3D Global Time Intelligence|Real-time global time synchronization with 3D Earth visualization. Interactive world clocks, country explorer, and cinematic animations.|}}
+{{nav:home}}
+{{include:head}}
+{{include:navbar}}
+
+<div class="scanlines"></div>
+
+<!-- HERO: 3D Earth Section -->
+<section class="earth-section" id="heroEarth">
+  <div id="earth-container"></div>
+  <div class="globe-hud-corner tl">
+    <span class="hud-line"></span>
+    SYS: ONLINE
+    <span class="hud-line"></span>
+    SAT: 24/24
+    <span class="hud-line"></span>
+    SYNC: ACTIVE
+  </div>
+  <div class="globe-hud-corner tr">
+    <span class="hud-line"></span>
+    TIME NETWORK
+    <span class="hud-line"></span>
+    141 COUNTRIES
+    <span class="hud-line"></span>
+    v4.0
+  </div>
+  <div class="globe-hud-corner bl">
+    <span class="hud-line"></span>
+    LAT: 0.000°
+    <span class="hud-line"></span>
+    LNG: 0.000°
+    <span class="hud-line"></span>
+    ALT: 420 km
+  </div>
+  <div class="globe-hud-corner br">
+    <span class="hud-line"></span>
+    <span id="hudLocalTime">--:--:--</span>
+    <span class="hud-line"></span>
+    <span id="hudLocalDate">--</span>
+  </div>
+  <div class="container earth-content" style="position:relative;z-index:3;">
+    <div class="hero-content" style="text-align:center;max-width:800px;margin:0 auto;padding:120px 0 60px;">
+      <div class="hero-badge"><span class="pulse-ring"></span> Live Global Time Network</div>
+      <h1 class="hero-title">Time <span class="gradient-text">Intelligence</span></h1>
+      <p class="hero-desc">Real-time global time synchronization. Track every time zone, explore countries, and visualize time across the world in 3D.</p>
+      <div class="hero-actions">
+        <a href="world-clocks.html" class="btn btn-primary" data-transition><i class="fas fa-globe"></i> 3D World Clocks</a>
+        <a href="explorer.html" class="btn btn-ghost" data-transition><i class="fas fa-search"></i> Explore Countries</a>
+      </div>
+      <div class="hero-clock-display" data-reveal style="margin-top:40px;">
+        <div class="hero-clock-card glass" style="display:inline-flex;padding:24px 40px;border-radius:var(--radius-lg);flex-direction:column;align-items:center;gap:8px;">
+          <span class="clock-label" style="font-size:0.75rem;text-transform:uppercase;letter-spacing:3px;color:var(--text-muted);"><span class="pulse-ring"></span> Your Local Time</span>
+          <div class="clock-time hero-clock-time" style="font-size:3rem;font-weight:200;font-family:var(--font-mono);letter-spacing:4px;color:var(--text-primary);">--:--:--</div>
+          <div class="clock-seconds hero-clock-seconds" style="font-family:var(--font-mono);color:var(--text-muted);">--</div>
+          <div class="clock-date hero-clock-date" style="font-size:0.85rem;color:var(--text-secondary);">Loading...</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-indicator"><div class="mouse"></div><span>Scroll</span></div>
+</section>
+
+<!-- GLOBE SEARCH + INFO PANEL -->
+<section class="globe-section section" id="interactiveGlobe">
+  <div class="container" style="position:relative;z-index:2;">
+    <div class="globe-search">
+      <div class="global-search" id="globalSearch">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" id="homeSearch" placeholder="Search any country, capital, or timezone..." autocomplete="off">
+        <div class="search-dropdown" id="homeSearchResults"></div>
+      </div>
+    </div>
+    <div class="globe-info-panel" id="globeInfoPanel">
+      <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:8px;">
+        <span style="font-size:2rem;" id="giFlag">&#127758;</span>
+        <div>
+          <div style="font-weight:700;font-size:1.1rem;" id="giName">Select a country</div>
+          <div style="font-size:0.78rem;color:var(--text-muted);" id="giZone">Click on the globe or search above</div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-sm);margin-top:var(--space-sm);">
+        <div><div style="font-size:0.6rem;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted);">Local Time</div><div class="clock-time" id="giTime" style="font-family:var(--font-mono);color:var(--accent-3);font-size:1.2rem;">--:--:--</div></div>
+        <div><div style="font-size:0.6rem;text-transform:uppercase;letter-spacing:1px;color:var(--text-muted);">Date</div><div id="giDate" style="font-family:var(--font-mono);color:var(--text-secondary);font-size:0.85rem;">--</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3D BRAND SLIDER (Replaces old feature grid + stat cards + clock grid + time compare) -->
+<section class="brand-slider-section section">
+  <div class="container">
+    <div class="section-label"><i class="fas fa-cubes"></i> Ecosystem</div>
+    <h2 class="section-title">Platform <span class="gradient-text">Modules</span></h2>
+    <p class="section-subtitle">Explore our next-generation time intelligence ecosystem. Each module is a fully interactive 3D experience.</p>
+  </div>
+  <div class="brand-slider">
+    <div class="swiper">
+      <div class="swiper-wrapper"></div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+</section>
+
+<!-- LIVE DASHBOARD + INTELLIGENCE PANEL -->
+<section class="section" style="background:var(--bg-secondary);">
+  <div class="container">
+    <div class="section-label"><span class="pulse-ring"></span> Live Global Dashboard</div>
+    <h2 class="section-title">World <span class="gradient-text">Intelligence</span></h2>
+    <p class="section-subtitle">Real-time global analytics powered by continuous monitoring.</p>
+    <div class="hud-dashboard" style="margin-top:32px;">
+      <div class="hud-dashboard-grid">
+        <div class="hud-dash-item glass" data-reveal>
+          <div class="dash-label"><i class="fas fa-sun" style="color:#fdcb6e;"></i> Daylight Zones</div>
+          <div class="dash-value odo-auto" id="daylightCount">--</div>
+        </div>
+        <div class="hud-dash-item glass" data-reveal data-reveal-delay="0.08">
+          <div class="dash-label"><i class="fas fa-moon" style="color:#636e72;"></i> Night Zones</div>
+          <div class="dash-value odo-auto" id="nightCount">--</div>
+        </div>
+        <div class="hud-dash-item glass" data-reveal data-reveal-delay="0.16">
+          <div class="dash-label"><i class="fas fa-briefcase" style="color:#00cec9;"></i> Business Hours</div>
+          <div class="dash-value odo-auto" id="businessCount">--</div>
+        </div>
+        <div class="hud-dash-item glass" data-reveal data-reveal-delay="0.24">
+          <div class="dash-label"><i class="fas fa-flag" style="color:#a29bfe;"></i> Countries Tracked</div>
+          <div class="dash-value" id="countryCount">141</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROBOTIC AI COMMAND MODULES -->
+<section class="ai-command-zone section">
+  <div class="container">
+    <div class="section-label"><i class="fas fa-robot"></i> AI Command Center</div>
+    <h2 class="section-title">Intelligence <span class="gradient-text">Modules</span></h2>
+    <p class="section-subtitle">Robotic AI systems monitoring global time, weather, and data streams in real time.</p>
+    <div class="command-grid">
+      <div class="command-module" style="--module-accent:#6c5ce7;" data-reveal>
+        <div class="command-module-scanline"></div>
+        <div class="command-module-header">
+          <div class="command-module-icon" style="background:linear-gradient(135deg,#6c5ce7,transparent);"><i class="fas fa-clock"></i><span class="pulse-dot"></span></div>
+          <div class="command-module-title">Time Synchronization</div>
+        </div>
+        <div class="command-module-desc">Real-time clock synchronization across 141 countries with sub-second accuracy. All time zones updated every second.</div>
+        <div class="command-module-stats">
+          <span class="command-stat"><span class="stat-num" id="aiSyncCountries">141</span> countries</span>
+          <span class="command-stat"><span class="stat-num">1s</span> interval</span>
+          <span class="command-stat"><span class="stat-num">24/7</span> uptime</span>
+        </div>
+        <div class="command-module-data-line"></div>
+      </div>
+      <div class="command-module" style="--module-accent:#00cec9;" data-reveal data-reveal-delay="0.08">
+        <div class="command-module-scanline"></div>
+        <div class="command-module-header">
+          <div class="command-module-icon" style="background:linear-gradient(135deg,#00cec9,transparent);"><i class="fas fa-cloud-sun"></i><span class="pulse-dot"></span></div>
+          <div class="command-module-title">Weather Intelligence</div>
+        </div>
+        <div class="command-module-desc">Real-time weather tracking for every major city. Temperature, humidity, wind speed, and condition monitoring.</div>
+        <div class="command-module-stats">
+          <span class="command-stat"><span class="stat-num" id="aiWeatherCities">500+</span> cities</span>
+          <span class="command-stat"><span class="stat-num">API</span> + fallback</span>
+          <span class="command-stat"><span class="stat-num">Live</span> updates</span>
+        </div>
+        <div class="command-module-data-line"></div>
+      </div>
+      <div class="command-module" style="--module-accent:#a29bfe;" data-reveal data-reveal-delay="0.16">
+        <div class="command-module-scanline"></div>
+        <div class="command-module-header">
+          <div class="command-module-icon" style="background:linear-gradient(135deg,#a29bfe,transparent);"><i class="fas fa-chart-line"></i><span class="pulse-dot"></span></div>
+          <div class="command-module-title">Global Analytics</div>
+        </div>
+        <div class="command-module-desc">Daylight distribution tracking, business hours analysis, and time zone comparison across the entire globe.</div>
+        <div class="command-module-stats">
+          <span class="command-stat"><span class="stat-num" id="aiDaylightPct">--%</span> daylight</span>
+          <span class="command-stat"><span class="stat-num" id="aiNightPct">--%</span> night</span>
+          <span class="command-stat"><span class="stat-num" id="aiBusinessPct">--%</span> business</span>
+        </div>
+        <div class="command-module-data-line"></div>
+      </div>
+      <div class="command-module" style="--module-accent:#fd79a8;" data-reveal data-reveal-delay="0.24">
+        <div class="command-module-scanline"></div>
+        <div class="command-module-header">
+          <div class="command-module-icon" style="background:linear-gradient(135deg,#fd79a8,transparent);"><i class="fas fa-search"></i><span class="pulse-dot"></span></div>
+          <div class="command-module-title">Deep Search Engine</div>
+        </div>
+        <div class="command-module-desc">Search across countries, capitals, time zones, and cities. Instant results with live time and weather data.</div>
+        <div class="command-module-stats">
+          <span class="command-stat"><span class="stat-num">141</span> countries</span>
+          <span class="command-stat"><span class="stat-num">500+</span> cities</span>
+          <span class="command-stat"><span class="stat-num">Instant</span> search</span>
+        </div>
+        <div class="command-module-data-line"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS COUNTERS -->
+<section class="section" style="background:var(--bg-secondary);">
+  <div class="container">
+    <div class="section-label"><i class="fas fa-chart-bar"></i> Global Statistics</div>
+    <h2 class="section-title">By The <span class="gradient-text">Numbers</span></h2>
+    <p class="section-subtitle">AtlasClock powers global time intelligence across the world.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;margin-top:48px;">
+      <div class="stat-card glass" data-reveal><div class="stat-value"><span class="odo-auto" id="statCountries">0</span></div><div class="stat-label">Countries Tracked</div></div>
+      <div class="stat-card glass" data-reveal data-reveal-delay="0.1"><div class="stat-value"><span class="odo-auto" id="statZones">0</span></div><div class="stat-label">Time Zones</div></div>
+      <div class="stat-card glass" data-reveal data-reveal-delay="0.2"><div class="stat-value"><span class="odo-auto" id="statCities">0</span></div><div class="stat-label">Cities Monitored</div></div>
+      <div class="stat-card glass" data-reveal data-reveal-delay="0.3"><div class="stat-value"><span class="odo-auto" id="statUptime">0</span></div><div class="stat-label">% Network Uptime</div></div>
+    </div>
+  </div>
+</section>
+
+{{include:footer}}
+{{include:scripts}}

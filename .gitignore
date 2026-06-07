@@ -1,0 +1,176 @@
+# Created by GitHub Deployment Agent
+# https://www.toptal.com/developers/gitignore
+
+#################
+#   Operating System
+#################
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+*.orig
+*.bak
+*.tmp
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+#################
+#   Editors & IDEs
+#################
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.project
+.settings/
+.classpath
+*.code-workspace
+.history/
+.vscode-test/
+
+#################
+#   Dependencies
+#################
+node_modules/
+.pnp/
+.pnp.js
+
+#################
+#   Build Output
+#################
+dist/
+build/
+out/
+.next/
+.nuxt/
+.output/
+.cache/
+target/
+*.tsbuildinfo
+.eslintcache
+*.css.map
+*.js.map
+
+#################
+#   Environment & Secrets
+#################
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+.env.test
+*.key
+*.pem
+*.crt
+*.p12
+*.pfx
+secrets/
+config/credentials.yml.enc
+
+#################
+#   Logs & Databases
+#################
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.sqlite
+*.sqlite3
+*.db
+
+#################
+#   OS & Runtime
+#################
+.npm/
+.yarn/
+.yarnrc.yml
+.pnpm-store/
+.serverless/
+.fusebox/
+.dynamodb/
+.terragrunt-cache/
+.terraform/
+
+#################
+#   Docker
+#################
+.docker/
+
+#################
+#   Python
+#################
+__pycache__/
+*.py[cod]
+*.pyo
+*.so
+.Python
+env/
+venv/
+.venv/
+.env/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.pytest_cache/
+*.egg-info/
+*.egg
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+
+#################
+#   Rust
+#################
+target/
+Cargo.lock
+
+#################
+#   Go
+#################
+vendor/
+*.test
+
+#################
+#   Java
+#################
+*.class
+*.jar
+*.war
+*.ear
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+#################
+#   Misc
+#################
+.git/
+.gitkeep
+.svn/
+.hg/
+.DS_Store
+coverage/
+.nyc_output/
+*.tgz
+.yarn-integrity
+.env.build
+.env.ci
+
+# Node.js specific
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm/
+*.tsbuildinfo
+.eslintcache
